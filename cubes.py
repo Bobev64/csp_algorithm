@@ -3,7 +3,6 @@ import turtle
 def rectPrism(t: turtle.Turtle, l: float, w: float, h: float, colors: list) -> None:
     t.color(colors[0])
     t.begin_fill()
-    t.setheading(0)
     for i in range(5):
         t.forward(w if i%2 == 0 else h)
         t.left(90)
