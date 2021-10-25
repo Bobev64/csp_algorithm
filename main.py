@@ -2,8 +2,8 @@ import shapes
 import turtle
 
 painter = turtle.Turtle()
-painter.speed(1)
+painter.speed(0)
 
-shapes.cube(painter, 100, colors = ["red", "green", "blue"])
+shapes.circle(painter, 100, "blue")
 wn = turtle.Screen()
 wn.mainloop()

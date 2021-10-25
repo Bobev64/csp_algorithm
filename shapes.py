@@ -1,5 +1,26 @@
 import turtle
+import math
 
+#2d Shapes
+def circle(t: turtle.Turtle, r: float, color: str) -> None:
+    """`shapes.circle`:
+        Draw a circle with the provided dimensions
+    Parameters:
+        - `t` (turtle.Turtle):
+            the turtle used to draw the shape
+        - `r` (float):
+            the radius of the circle
+        - `color` (color):
+            the color of the circle
+
+    Notes:
+        - side units are in pixels
+    """
+    t.color(color)
+    t.begin_fill()
+    t.circle(r)
+    t.end_fill()
+    
 def rectangle(t: turtle.Turtle, side1: float, side2: float, cornerOneAngle: float, cornerTwoAngle: float, right: bool, color: str) -> None:
     """`shapes.rectangle`:
         Draw a rectangle with the provided dimensions, corner angles, and color
@@ -25,7 +46,6 @@ def rectangle(t: turtle.Turtle, side1: float, side2: float, cornerOneAngle: floa
         - cornerOneAngle and cornerTwoAngle must add up to 180 in order to form an actual rectance
         - more info on colors can be found in the docs for turtle.Turtle.color()
         - yes I know if you set either of the corner angles not equal to 90 it's a parallelogram, but that's too long to type
-
     """
     t.color(color)
     t.begin_fill()
@@ -36,6 +56,8 @@ def rectangle(t: turtle.Turtle, side1: float, side2: float, cornerOneAngle: floa
         if i == 3: t.end_fill() #fill in drawn rectangle after drawing 4 sides
 
 
+
+#3d Shapes
 def rectPrism(t: turtle.Turtle, l: float, w: float, h: float, colors: list) -> None:
     """`shapes.rectPrism`:
         Draw a rectangular prism with the provided dimensions and colors
