@@ -1,16 +1,6 @@
 import turtle
-import math
-painter = turtle.Turtle()
-painter.penup()
-painter.goto(-200, -200)
-painter.pendown()
-painter.speed(0)
-painter.color("blue")
-painter.hideturtle()
 
-print(painter.xcor(), painter.ycor())
-
-def rectPrism(l: float, w: float, h: float, colors: list) -> None:
+def rectPrism(painter: turtle.Turtle, l: float, w: float, h: float, colors: list) -> None:
     painter.color(colors[0])
     painter.begin_fill()
     painter.setheading(0)
@@ -33,7 +23,7 @@ def rectPrism(l: float, w: float, h: float, colors: list) -> None:
     painter.setheading(225)
     painter.forward(l/2)
     painter.end_fill()
-    
+
     painter.setheading(90)
     painter.forward(h)
     painter.color(colors[2])
@@ -47,15 +37,7 @@ def rectPrism(l: float, w: float, h: float, colors: list) -> None:
     painter.forward(w)
     painter.end_fill()
     painter.penup()
-    painter.goto(-200, -200)
 
-def cube(l, colors) -> None:
-    rectPrism(l, l, l, colors)
-    
-for i in range(100, 300, 10):
-    cube(i, ["red", "green", "blue"])
-    #painter.clear()
+def cube(painter: turtle.Turtle, l: float, colors: list) -> None:
+    rectPrism(painter, l, l, l, colors)
 
-
-wn = turtle.Screen()
-wn.mainloop()
