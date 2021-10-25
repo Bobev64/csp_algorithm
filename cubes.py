@@ -4,40 +4,25 @@ def rectPrism(painter: turtle.Turtle, l: float, w: float, h: float, colors: list
     painter.color(colors[0])
     painter.begin_fill()
     painter.setheading(0)
-    for i in range(2):
-        painter.forward(w)
+    for i in range(5):
+        painter.forward(w if i%2 == 0 else h)
         painter.left(90)
-        painter.forward(h)
-        painter.left(90)
-    painter.end_fill()
+        if i == 3: painter.end_fill()
 
-    painter.forward(w)
     painter.color(colors[1])
     painter.begin_fill()
-    painter.setheading(90)
-    painter.forward(h)
-    painter.setheading(45)
-    painter.forward(l/2)
-    painter.setheading(270)
-    painter.forward(h)
-    painter.setheading(225)
-    painter.forward(l/2)
-    painter.end_fill()
+    for i in range(5):
+        painter.forward(h if i%2 == 0 else l/2)
+        painter.right(45 if i%2 == 0 else 135)
+        if i == 3: painter.end_fill()
 
-    painter.setheading(90)
-    painter.forward(h)
     painter.color(colors[2])
     painter.begin_fill()
-
-    painter.setheading(180)
-    painter.forward(w)
-    painter.setheading(45)
-    painter.forward(l/2)
-    painter.setheading(0)
-    painter.forward(w)
+    for i in range(3):
+        painter.forward(l/2 if i%2 == 0 else w)
+        painter.right(-135 if i%2 == 0 else -45)
     painter.end_fill()
     painter.penup()
 
 def cube(painter: turtle.Turtle, l: float, colors: list) -> None:
     rectPrism(painter, l, l, l, colors)
-
