@@ -14,8 +14,7 @@ def circle(t: turtle.Turtle, r: float, color: str) -> None:
             the color of the circle
 
     Notes:
-        - side units are in pixels
-    """
+        - side units are in pixels"""
     t.color(color)
     t.begin_fill()
     t.circle(r)
@@ -45,8 +44,7 @@ def rectangle(t: turtle.Turtle, side1: float, side2: float, cornerOneAngle: floa
         - angle units are in degrees
         - cornerOneAngle and cornerTwoAngle must add up to 180 in order to form an actual rectance
         - more info on colors can be found in the docs for turtle.Turtle.color()
-        - yes I know if you set either of the corner angles not equal to 90 it's a parallelogram, but that's too long to type
-    """
+        - yes I know if you set either of the corner angles not equal to 90 it's a parallelogram, but that's too long to type"""
     t.color(color)
     t.begin_fill()
     for i in range(5): #loop fives times per rectangle to set up for the next face
@@ -54,8 +52,6 @@ def rectangle(t: turtle.Turtle, side1: float, side2: float, cornerOneAngle: floa
         angle = cornerOneAngle if i%2 == 0 else cornerTwoAngle
         t.right(angle) if right else t.left(angle)
         if i == 3: t.end_fill() #fill in drawn rectangle after drawing 4 sides
-
-
 
 #3d Shapes
 def rectPrism(t: turtle.Turtle, l: float, w: float, h: float, colors: list) -> None:
@@ -75,8 +71,7 @@ def rectPrism(t: turtle.Turtle, l: float, w: float, h: float, colors: list) -> N
 
     Notes:
         - length, width, and height units are in pixels
-        - colors should be formatted similarly to this: `colors=["red", "green", "blue"]
-        """
+        - colors should be formatted similarly to this: `colors=["red", "green", "blue"]"""
     #scale the length to look proper on a 2d plain
     l /= 2
     #draw the front face
@@ -98,6 +93,5 @@ def cube(t: turtle.Turtle, l: float, colors: list) -> None:
             a list containing the colors for the first, second, and third faces of the prism
     Notes:
         - length unit is pixels
-        - colors should be formatted similarly to this: `colors=["red", "green", "blue"]
-    """
+        - colors should be formatted similarly to this: `colors=["red", "green", "blue"]"""
     rectPrism(t, l, l, l, colors)
