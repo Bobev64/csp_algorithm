@@ -1,5 +1,4 @@
 import turtle
-import math
 
 #2d Shapes
 def circle(t: turtle.Turtle, r: float, color: str) -> None:
@@ -50,8 +49,11 @@ def rectangle(t: turtle.Turtle, side1: float, side2: float, cornerOneAngle: floa
     for i in range(5): #loop fives times per rectangle to set up for the next face
         t.forward(side1 if i%2 == 0 else side2) #swap betweeen side lengths with modulo
         angle = cornerOneAngle if i%2 == 0 else cornerTwoAngle
+        if i == 2: t.end_fill() #fill in drawn rectangle after drawing 3 sides
         t.right(angle) if right else t.left(angle)
-        if i == 3: t.end_fill() #fill in drawn rectangle after drawing 4 sides
+
+def square(t: turtle.Turtle, l: float, right: bool, color: str) -> None:
+    rectangle(t, l, l, 90, 90, right, color)
 
 #3d Shapes
 def rectPrism(t: turtle.Turtle, l: float, w: float, h: float, colors: list) -> None:
