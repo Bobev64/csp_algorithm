@@ -1,7 +1,11 @@
-1. INVESTIGATION: Algorithm that draws squares over a given backdrop, backdrop will also be algorithmically generated. Could also do fractals as another possibility and simply implement a mathematical equation in code after understanding it.
+1 (Investigaion): Algorithm that draws squares over a given backdrop, backdrop will also be algorithmically generated. Could also do fractals as another possibility and simply implement a mathematical equation in code after understanding how the math for the fractal itself works. Yet another possibility would be to have a moving turtle which bounces, a la bouncing dvd screensaver. 
 
-2. PLANNING: We decided to go with the former in the previous point, being making a backdrop and then drawing squares over it. We'll divide the work up between ourselves as equal as possible to ensure a workload in which we both get done near the same time.
+2 (Planning): We decided to make an algorithm that generates a cube and an algorithm which generates a rainbow behind it.  We'll divide these up into functions which go into their own respective python files for greater encapsulation and then from there import them into a file named main.py which will actually execute the program in its entirety. The design of this will help increase readability overall and make things far more pleasing to the eye for outside viewers.
 
-3. DESIGNING: We'll take a bottom up approach in which we design individual functions and then throw them together within the final program instead of a top down approach where we design everything and attempt to split hairs from there. *** TODO: needs to state pseudocode for algos
+3 (Designing): We'll take a bottom up approach in which we design individual functions and then throw them together within the final program instead of a top down approach where we design everything and attempt to split hairs from there. Our first algorithm will be one which generates a cube which is scaleable and can be different sizes. Our second algorithm will draw a rainbow gradient behind the cube as a backdrop.
 
-4. 
+4 (Create and test) & 5 (Evaluate the solution): See source code.
+
+6 (Document and Present): See screencast included with Canvas turn in.
+
+
